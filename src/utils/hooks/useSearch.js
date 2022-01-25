@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import _ from "lodash";
 export const useSearch = () => {
   const [data, setData] = useState(null);
