@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Image from "../Image";
 import styled from "styled-components";
 import DateInput from "../DateInput";
-import img from "../../Prueba.jpeg";
 import { useSearch } from "../../utils/hooks/useSearch";
 import { format } from "date-fns";
 import _ from "lodash";
@@ -45,7 +44,6 @@ const ImageCard = () => {
           <StyledLabel>{data?.title}</StyledLabel>
           {data?.media_type === "video" && (
             <StyledFrame
-              // width="800"
               height="450"
               allowFullScreen
               frameBorder="0"
