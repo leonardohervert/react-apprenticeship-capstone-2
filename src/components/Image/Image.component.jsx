@@ -8,10 +8,9 @@ const StyledImage = styled.img`
 `;
 
 const Image = ({ ...props }) => {
-  const { src, alt } = props;
   return (
     <React.Fragment>
-      <StyledImage src={src} alt={alt} resizeMode="contain" />
+      <StyledImage {...props} />
     </React.Fragment>
   );
 };

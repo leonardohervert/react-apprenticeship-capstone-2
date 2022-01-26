@@ -14,12 +14,10 @@ export const useSearch = () => {
       .then((data) => {
         if (!_.isEmpty(data.error))
           setError("There was an error, please try again.");
-        if (data.code === 400) setError(data.msg);
+        if ([400, 404].includes(data.code)) setError(data.msg);
         else setData(data);
-        console.log(data);
       })
       .catch((error) => {
-        console.log("catch");
         setError(error.msg);
       });
   };

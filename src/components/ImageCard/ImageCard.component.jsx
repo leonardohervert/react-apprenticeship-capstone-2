@@ -36,9 +36,6 @@ const ImageCard = () => {
           }}
         />
         {!_.isEmpty(error) && <p>{error}</p>}
-        {/* <div style={{}}>
-          <img src={logo} className="Loading-logo" alt="logo" />
-        </div> */}
       </ContentDiv>
       {data && (
         <React.Fragment>
@@ -53,7 +50,11 @@ const ImageCard = () => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             />
           )}
-          {data?.media_type === "image" && <Image src={data?.url} alt={``} />}
+          <Image
+            src={data?.url}
+            data-testid="nasa-image"
+            alt={`${data?.title}`}
+          />
           <StyledLabel>{data?.explanation}</StyledLabel>
         </React.Fragment>
       )}
